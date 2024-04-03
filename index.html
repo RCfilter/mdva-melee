@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<title>mdva mele</title>
-<link rel="stylesheet" href="style/linkin-park.css">
-<link rel="icon" type="image/png" href="favicon.png">
+<head>
+        <meta charset="utf-8">
+        <title>mdva mele</title>
+        <link rel="stylesheet" href="style/linkin-park.css">
+        <link rel="icon" type="image/png" href="favicon.png">
 
+        <script>
+                // Attach a listener to the beforeunload event
+                window.addEventListener('beforeunload', function(event) {
+                        // Cancel the event (prevents the browser from unloading the page immediately)
+                        event.preventDefault();
+                        // Chrome requires returnValue to be set
+                        event.returnValue = '';
+
+                        // Display a confirmation message with an image
+                        var confirmationMessage = '<div style="text-align:center;">';
+                        confirmationMessage += '<img src="https://i.imgur.com/vawCWb5.jpg" alt="Confirmation Image" style="width: 200px;">';
+                        confirmationMessage += '<p>Leaving so soon?</p>';
+                        confirmationMessage += '</div>';
+                        (event || window.event).returnValue = confirmationMessage; // For IE and Firefox
+                        return confirmationMessage; // For Chrome and Safari
+                });
+        </script>
+
+<head>
+<body>
 
 <div class="page">
-    <h1 class="title">MDVA Mele</h1>
+    <h1 class="title">MDVA Meleeeee</h1>
 
     welcome to the website for mdva melee! i'm out here doing my best! ¯\_(ツ)_/¯
 
@@ -53,3 +74,6 @@
 
     
 </div>
+
+</body>
+</html>
